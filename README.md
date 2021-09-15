@@ -1,23 +1,17 @@
-# Getting Started
+Getting started:
 
-### Reference Documentation
+1) Forward to the http//localhost:8080/login to login or use Postman for it.
+2) Any wrong credentials would provide custom UserNotFoundException with custom message.
+3) Also, we have correct username and password for the authentication in the application.yml file.
+4) Input correct username and password from the application.yml file to access 
+   the secured welcome page.
+5) Each time user trying to access the application it would redirect to the login page by default.
 
-For further reference, please consider the following sections:
+Application consist next classes:
+1) WebSecurityConfig is simple spring security configuration
+2) TestController is a simple controller with post method to the /welcome url.
+3) UserNotFoundException is a custom RuntimeException with default message.
+4) CustomAuthenticationProvider is the custom AuthenticationProvider.
+5) SpringSecurityTestTaskApplication is the main application class.
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.5.4/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.4/maven-plugin/reference/html/#build-image)
-* [Spring Security](https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#boot-features-security)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#boot-features-developing-web-applications)
-
-### Guides
-
-The following guides illustrate how to use some features concretely:
-
-* [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
-* [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
-* [Authenticating a User with LDAP](https://spring.io/guides/gs/authenticating-ldap/)
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-
+Application also have integration tests in the test directory. 

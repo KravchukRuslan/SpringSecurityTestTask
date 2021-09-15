@@ -13,9 +13,9 @@ import java.util.Objects;
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
-    @Value("${user.asdf}")
+    @Value("${user.default.name}")
     private String secretUsername;
-    @Value("${user.password}")
+    @Value("${user.default.password}")
     private String secretPassword;
 
     @Override

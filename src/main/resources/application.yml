@@ -1,3 +1,4 @@
 user:
-  asdf: user
-  password: password
+  default:
+    name: user
+    password: password
